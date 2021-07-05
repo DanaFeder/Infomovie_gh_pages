@@ -1,0 +1,52 @@
+@import '../globals';
+
+.sarchPage {
+  background-color: $darkgrayColor;
+  min-height: 100vh;
+  
+  .searchBoxContainer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 140px;
+    transition: height 0.5s;
+
+    &.center {
+      height: 600px;
+    }
+
+    input {
+      height: 45px;
+      min-width: 240px;
+      width: 30%;
+      background: #fff;
+      border-radius: 25px;
+      padding: 12px;
+      border: 1px solid #fff;
+      position: relative;
+      transition: border 0.3s;
+
+      &:focus {
+        border: 5px solid $goldColor;
+      }
+    }
+  }
+
+  .cardsContainer {
+    display: flex;
+    margin: 0 20% 80px 20%;
+    overflow: auto;
+    transition: block 0.4s;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+
+    @include mobile {
+      margin: 0 10% 80px 10%;
+
+    }
+
+    &.hidden {
+      display: none;
+    }
+  }
+}

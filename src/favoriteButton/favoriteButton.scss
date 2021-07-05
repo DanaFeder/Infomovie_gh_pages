@@ -1,0 +1,14 @@
+@import '../globals';
+
+.favBtn {
+  background-color: transparent;
+  border: none;
+  height: 30px;
+  outline: none;
+
+  i {
+    &::before {
+      color: $darkpinkColor;
+    }
+  }
+}

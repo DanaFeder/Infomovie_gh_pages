@@ -1,0 +1,43 @@
+@mixin mobile {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+
+$goldColor: #f7b239;
+$darkpinkColor: #db5461;
+$darkgrayColor: #282E3A;
+$grayColor: #3D4957;
+$darkestGrayColor: #14171d;
+$blueGreenColor: #2E8BC0;
+$lightGray: #DBC7A6;
+
+* {
+  font-family: 'Lato', sans-serif;
+  outline: none;
+
+  > div {
+    overflow: hidden;
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+    background: $grayColor;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: $goldColor;
+  }
+}
